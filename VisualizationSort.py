@@ -2,13 +2,14 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 import time
 
 class SortVisualizationWidget(QtWidgets.QWidget):
-    def __init__(self, data, sort_type="bubble", parent=None):
+    def __init__(self, data, sort_type="select", parent=None):
         super().__init__(parent)
         self.data = data
         self.sort_type = sort_type
-        self.animation_speed = 0.2  # Tốc độ hoạt hình
+        self.ascending = True  # Mặc định là sắp xếp tăng dần
+        self.animation_speed = 0.5  # Tốc độ di chuyển
         self.setWindowTitle("Sắp Xếp Trực Quan")
-        self.resize(700, 400)
+        self.resize(700, 500)
 
         # Scene và View để vẽ biểu đồ
         self.scene = QtWidgets.QGraphicsScene(self)
@@ -20,7 +21,19 @@ class SortVisualizationWidget(QtWidgets.QWidget):
         self.start_button.setGeometry(10, 360, 200, 30)
         self.start_button.clicked.connect(self.start_sorting)
 
-        self.draw_data(self.data, ['red' for _ in range(len(self.data))])
+        # Nút radio để chọn sắp xếp tăng dần/giảm dần
+        self.ascending_radio = QtWidgets.QRadioButton("Tăng dần", self)
+        self.ascending_radio.setGeometry(220, 450, 100, 30)
+        self.ascending_radio.setChecked(True)
+        self.ascending_radio.toggled.connect(self.update_sort_order)
+        self.descending_radio = QtWidgets.QRadioButton("Giảm dần", self)
+        self.descending_radio.setGeometry(320, 450, 100, 30)
+
+        self.draw_data(self.data, ['blue' for _ in range(len(self.data))])
+
+    def update_sort_order(self):
+        """Cập nhật chế độ sắp xếp"""
+        self.ascending = self.ascending_radio.isChecked()
 
     def draw_data(self, data, color_array):
         """Vẽ biểu đồ cột từ dữ liệu và tô màu cột (hỗ trợ giá trị âm)"""
@@ -66,74 +79,98 @@ class SortVisualizationWidget(QtWidgets.QWidget):
         zero_line_pen = QtGui.QPen(QtGui.QColor("black"), 2)
         self.scene.addLine(offset, zero_line, c_width, zero_line, zero_line_pen)
 
-    def selection_sort_visualization(self, data):
-        """Selection Sort với cập nhật biểu đồ"""
+    def selection_sort_recursive(self, data, start=0):
+        """Sắp xếp chọn đệ quy với trực quan hóa"""
         n = len(data)
-        for i in range(n - 1):
-            min_index = i  # Giả sử phần tử nhỏ nhất là i
-            for j in range(i + 1, n):
-                # So sánh và tìm phần tử nhỏ hơn
-                color_array = ['yellow' if k == i or k == j else 'red' for k in range(n)]  # Đánh dấu các phần tử đang so sánh
-                self.draw_data(data, color_array)
-                QtCore.QCoreApplication.processEvents()
-                time.sleep(self.animation_speed)
 
-                if data[j] < data[min_index]:
-                    min_index = j
-            
-            # Hoán đổi nếu cần thiết
-            if min_index != i:
-                data[i], data[min_index] = data[min_index], data[i]
+        # Trường hợp cơ sở: Nếu đã đến cuối danh sách, kết thúc
+        if start >= n - 1:
+            # Vẽ mảng đã sắp xếp cuối cùng
+            self.draw_data(data, ['green' for _ in range(len(data))])
+            return
 
-            # Cập nhật màu sắc sau khi hoán đổi
-            color_array = ['green' if k <= i else 'red' for k in range(n)]  # Đánh dấu các phần tử đã được sắp xếp
-            self.draw_data(data, color_array)
-            QtCore.QCoreApplication.processEvents()
-            time.sleep(self.animation_speed)
-        
-        # Vẽ biểu đồ hoàn thành sau khi sắp xếp
-        self.draw_data(data, ['green' for _ in range(len(data))])
+        # Tìm chỉ số của phần tử nhỏ nhất trong mảng con bằng cách sử dụng đệ quy
+        min_index = self.find_min_index(data, start, start + 1)
+
+        # Trực quan hóa so sánh và lựa chọn
+        color_array = ['orange' if k == start or k == min_index else 'blue' for k in range(n)]
+        self.draw_data(data, color_array)
+        QtCore.QCoreApplication.processEvents()
+        time.sleep(self.animation_speed)
+
+        # Hoán đổi phần tử hiện tại với phần tử nhỏ nhất nếu cần
+        if min_index != start:
+            data[start], data[min_index] = data[min_index], data[start]
+
+        # Trực quan hóa mảng sau khi cập nhật
+        color_array = ['green' if k <= start else 'blue' for k in range(n)]
+        self.draw_data(data, color_array)
+        QtCore.QCoreApplication.processEvents()
+        time.sleep(self.animation_speed)
+
+        # Gọi đệ quy cho phần mảng còn lại
+        self.selection_sort_recursive(data, start + 1)
+
+    def find_min_index(self, data, current_min, index):
+        """Tìm chỉ số của phần tử nhỏ/lớn nhất trong mảng bằng cách sử dụng đệ quy"""
+        # Trường hợp cơ sở: Nếu index đạt đến cuối danh sách, trả về chỉ số phần tử nhỏ/lớn nhất hiện tại
+        if index >= len(data):
+            return current_min
+
+        # Cập nhật chỉ số phần tử nhỏ/lớn nhất hiện tại tùy theo chế độ
+        if (self.ascending and data[index] < data[current_min]) or (not self.ascending and data[index] > data[current_min]):
+            current_min = index
+
+        # Tiếp tục đệ quy
+        return self.find_min_index(data, current_min, index + 1)
 
     def quick_sort_visualization(self, data):
-        """Quick Sort với cập nhật biểu đồ"""
-        color_array = ['red' for _ in range(len(data))]  # Màu ban đầu của mảng
-        self.quick_sort_step(data, 0, len(data) - 1, color_array)
+        """Quick Sort không đệ quy với cập nhật biểu đồ"""
+        stack = [(0, len(data) - 1)]  # Khởi tạo ngăn xếp với phạm vi ban đầu
+        color_array = ['blue' for _ in range(len(data))]  # Màu sắc ban đầu
+
+        while stack:
+            left, right = stack.pop()
+
+            if left < right:
+                # Phân hoạch mảng và lấy chỉ số phân chia
+                pivot_index = self.partition(data, left, right, color_array)
+
+                # Đẩy các đoạn mảng chưa sắp xếp vào stack
+                stack.append((left, pivot_index - 1))  # Nửa bên trái
+                stack.append((pivot_index, right))    # Nửa bên phải
+
         # Vẽ biểu đồ hoàn thành sau khi sắp xếp
         self.draw_data(data, ['green' for _ in range(len(data))])
 
-    def quick_sort_step(self, data, left, right, color_array):
-        """Phân chia và gọi đệ quy Quick Sort"""
-        if left < right:
-            # Phân hoạch mảng và lấy chỉ số phân chia
-            pivot_index = self.partition(data, left, right, color_array)
-
-            # Đệ quy sắp xếp hai nửa (trừ pivot)
-            self.quick_sort_step(data, left, pivot_index - 1, color_array)  # Nửa bên trái
-            self.quick_sort_step(data, pivot_index, right, color_array)  # Nửa bên phải
-
     def partition(self, data, left, right, color_array):
-        """Hàm phân hoạch mảng với pivot là phần tử giữa và giữ nguyên vị trí"""
-        pivot_index = (left + right) // 2  # Chọn pivot là phần tử giữa
+        """Hàm phân hoạch mảng với pivot là phần tử giữa"""
+        pivot_index = (left + right) // 2  # Pivot là phần tử giữa
         pivot_value = data[pivot_index]
         l, r = left, right
 
         while l <= r:
             # Đánh dấu các phần tử đang so sánh và pivot
             color_array_copy = color_array[:]
-            color_array_copy[pivot_index] = 'blue'  # Pivot
-            color_array_copy[l] = 'yellow'  # Đang so sánh từ bên trái
-            color_array_copy[r] = 'yellow'  # Đang so sánh từ bên phải
+            color_array_copy[pivot_index] = 'purple'  # Pivot
+            color_array_copy[l] = 'orange'         # Đang so sánh từ bên trái
+            color_array_copy[r] = 'orange'         # Đang so sánh từ bên phải
 
             self.draw_data(data, color_array_copy)
             QtCore.QCoreApplication.processEvents()
             time.sleep(self.animation_speed)
 
-            # Di chuyển con trỏ l sang phải nếu nhỏ hơn pivot
-            while data[l] < pivot_value:
-                l += 1
-            # Di chuyển con trỏ r sang trái nếu lớn hơn pivot
-            while data[r] > pivot_value:
-                r -= 1
+            # Di chuyển con trỏ l hoặc r dựa trên thứ tự sắp xếp
+            if self.ascending:
+                while data[l] < pivot_value:
+                    l += 1
+                while data[r] > pivot_value:
+                    r -= 1
+            else:
+                while data[l] > pivot_value:
+                    l += 1
+                while data[r] < pivot_value:
+                    r -= 1
 
             # Hoán đổi các phần tử nếu cần thiết
             if l <= r:
@@ -142,7 +179,7 @@ class SortVisualizationWidget(QtWidgets.QWidget):
                 r -= 1
 
                 # Vẽ lại khi có sự hoán đổi
-                color_array_copy = ['red' for _ in range(len(data))]
+                color_array_copy = ['blue' for _ in range(len(data))]
                 color_array_copy[l - 1] = 'green'  # Đánh dấu phần tử đã hoán đổi bên trái
                 color_array_copy[r + 1] = 'green'  # Đánh dấu phần tử đã hoán đổi bên phải
                 self.draw_data(data, color_array_copy)
@@ -150,18 +187,19 @@ class SortVisualizationWidget(QtWidgets.QWidget):
                 time.sleep(self.animation_speed)
 
         # Vẽ lại mảng sau khi hoàn tất phân hoạch
-        color_array_copy = ['red' for _ in range(len(data))]
-        color_array_copy[pivot_index] = 'blue'  # Pivot giữ nguyên màu
+        color_array_copy = ['blue' for _ in range(len(data))]
+        color_array_copy[pivot_index] = 'purple'  # Pivot giữ nguyên màu
         self.draw_data(data, color_array_copy)
         QtCore.QCoreApplication.processEvents()
         time.sleep(self.animation_speed)
 
         return l  # Trả về chỉ số bắt đầu phân hoạch tiếp theo
 
+
     def start_sorting(self):
         """Khởi chạy thuật toán sắp xếp theo loại"""
         if self.sort_type == "select":
-            self.selection_sort_visualization(self.data)
+            self.selection_sort_recursive(self.data)
         elif self.sort_type == "quick":
             self.quick_sort_visualization(self.data)
 

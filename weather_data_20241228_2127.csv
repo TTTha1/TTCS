@@ -1,0 +1,73 @@
+city,country,temperature,humidity,pressure,wind_speed,description,timestamp
+Hanoi,VN,17.0,42,1024,1.73,clear sky,2024-12-28 21:26:08
+Ho Chi Minh City,VN,26.15,83,1014,1.54,scattered clouds,2024-12-28 21:26:09
+Da Nang,VN,18.99,100,1022,3.09,mist,2024-12-28 21:26:10
+Hue,VN,18.06,94,1023,3.6,mist,2024-12-28 21:26:12
+Can Tho,VN,24.99,94,1014,4.12,scattered clouds,2024-12-28 21:26:13
+Nha Trang,VN,24.0,90,1018,7.12,overcast clouds,2024-12-28 21:26:14
+Da Lat,VN,15.14,98,1018,2.56,overcast clouds,2024-12-28 21:26:15
+Vung Tau,VN,25.59,85,1013,6.82,broken clouds,2024-12-28 21:26:17
+Quy Nhon,VN,22.93,89,1019,10.66,overcast clouds,2024-12-28 21:26:18
+Phan Rang-Thap Cham,VN,23.65,85,1016,5.33,overcast clouds,2024-12-28 21:26:19
+Ca Mau,VN,25.06,83,1014,5.12,overcast clouds,2024-12-28 21:26:20
+Tuy Hoa,VN,22.67,92,1019,8.34,overcast clouds,2024-12-28 21:26:22
+New York,US,4.04,92,1026,2.57,light rain,2024-12-28 21:26:23
+London,GB,4.56,95,1028,2.06,overcast clouds,2024-12-28 21:26:25
+Beijing,CN,-3.06,22,1026,0.88,clear sky,2024-12-28 21:26:26
+Tokyo,JP,4.01,57,1015,3.38,clear sky,2024-12-28 21:26:27
+Seoul,KR,-5.24,74,1025,0.51,clear sky,2024-12-28 21:26:28
+Oxford,GB,5.53,96,1028,2.06,broken clouds,2024-12-28 21:26:30
+Cambridge,CA,4.59,98,1016,3.09,mist,2024-12-28 21:26:31
+Las Vegas,US,6.98,61,1019,2.57,clear sky,2024-12-28 21:26:32
+Hawaii,US,23.12,71,1018,3.6,clear sky,2024-12-28 21:26:34
+Phan Thiet,VN,24.55,78,1014,5.51,broken clouds,2024-12-28 21:26:35
+Paris,FR,0.72,100,1029,2.57,fog,2024-12-28 21:26:36
+Berlin,DE,2.93,69,1029,1.16,clear sky,2024-12-28 21:26:38
+Madrid,ES,10.75,62,1028,1.54,clear sky,2024-12-28 21:26:39
+Rome,US,9.58,97,1022,0.89,overcast clouds,2024-12-28 21:26:40
+Vienna,AT,6.68,59,1030,3.6,clear sky,2024-12-28 21:26:42
+Amsterdam,NL,2.57,84,1028,2.57,mist,2024-12-28 21:26:43
+Brussels,BE,4.28,89,1028,1.54,clear sky,2024-12-28 21:26:44
+Lisbon,PT,15.1,54,1027,3.6,clear sky,2024-12-28 21:26:46
+Stockholm,SE,4.6,95,1021,4.12,broken clouds,2024-12-28 21:26:47
+Oslo,NO,2.95,88,1018,1.48,broken clouds,2024-12-28 21:26:49
+Copenhagen,DK,3.38,94,1027,2.06,broken clouds,2024-12-28 21:26:50
+Helsinki,FI,2.83,98,1021,4.47,light intensity drizzle,2024-12-28 21:26:51
+Dublin,US,11.91,93,1020,2.06,overcast clouds,2024-12-28 21:26:52
+Warsaw,PL,1.19,95,1030,1.54,mist,2024-12-28 21:26:54
+Prague,CZ,-0.59,100,1030,1.03,fog,2024-12-28 21:26:55
+Budapest,HU,7.04,61,1030,1.54,clear sky,2024-12-28 21:26:56
+Athens,GR,8.88,66,1021,7.72,scattered clouds,2024-12-28 21:26:57
+Zurich,CH,0.48,97,1030,1.54,mist,2024-12-28 21:26:59
+Istanbul,TR,6.08,87,1022,8.75,broken clouds,2024-12-28 21:27:00
+Moscow,RU,-0.33,64,1027,1.02,overcast clouds,2024-12-28 21:27:02
+Saint Petersburg,RU,1.14,91,1024,2.0,overcast clouds,2024-12-28 21:27:03
+Kiev,UA,0.4,97,1030,0.45,scattered clouds,2024-12-28 21:27:04
+Minsk,BY,-0.14,98,1029,2.55,snow,2024-12-28 21:27:05
+Bucharest,RO,2.42,93,1030,2.57,overcast clouds,2024-12-28 21:27:07
+Sofia,BG,2.86,77,1029,4.12,broken clouds,2024-12-28 21:27:08
+Belgrade,RS,5.05,70,1030,2.06,clear sky,2024-12-28 21:27:09
+Zagreb,HR,8.48,51,1030,1.03,clear sky,2024-12-28 21:27:11
+Sarajevo,BA,-1.05,93,1030,1.03,mist,2024-12-28 21:27:12
+Ljubljana,SI,5.64,65,1030,1.79,clear sky,2024-12-28 21:27:13
+Bratislava,SK,5.31,69,1030,1.03,clear sky,2024-12-28 21:27:14
+Tallinn,EE,4.3,93,1022,3.6,mist,2024-12-28 21:27:16
+Riga,LV,4.27,99,1025,1.54,overcast clouds,2024-12-28 21:27:18
+Vilnius,LT,3.46,100,1028,2.06,mist,2024-12-28 21:27:19
+Skopje,MK,8.82,46,1027,1.54,clear sky,2024-12-28 21:27:20
+Podgorica,ME,12.86,44,1025,1.54,clear sky,2024-12-28 21:27:22
+Tirana,AL,12.49,41,1023,3.09,clear sky,2024-12-28 21:27:23
+Valletta,MT,16.3,63,1023,3.09,few clouds,2024-12-28 21:27:24
+Reykjavik,IS,-4.68,67,997,3.6,few clouds,2024-12-28 21:27:26
+Luxembourg,BE,2.55,60,1029,1.83,broken clouds,2024-12-28 21:27:27
+Monaco,MC,16.37,51,1026,2.06,clear sky,2024-12-28 21:27:28
+San Marino,SM,11.6,46,1027,2.57,clear sky,2024-12-28 21:27:30
+Andorra la Vella,AD,8.26,36,1026,0.45,clear sky,2024-12-28 21:27:31
+Vaduz,LI,8.67,55,1029,1.22,few clouds,2024-12-28 21:27:32
+Manama,BH,21.04,80,1019,3.09,clear sky,2024-12-28 21:27:33
+Doha,QA,21.38,76,1019,2.57,clear sky,2024-12-28 21:27:35
+Abu Dhabi,AE,24.5,55,1019,2.57,clear sky,2024-12-28 21:27:36
+Muscat,OM,24.01,43,1020,3.09,few clouds,2024-12-28 21:27:37
+Kuwait City,KW,19.92,51,1018,4.89,overcast clouds,2024-12-28 21:27:39
+Riyadh,SA,26.08,25,1017,2.89,scattered clouds,2024-12-28 21:27:40
+Baghdad,IQ,15.95,36,1019,2.06,clear sky,2024-12-28 21:27:41

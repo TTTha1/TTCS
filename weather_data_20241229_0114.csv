@@ -1,0 +1,103 @@
+city,country,temperature,humidity,pressure,wind_speed,description,timestamp
+Hanoi,VN,16.0,59,1023,7.0,clear sky,2024-12-29 01:12:28
+Ho Chi Minh City,VN,25.6,72,1012,9.3,scattered clouds,2024-12-29 01:12:29
+Da Nang,VN,19.99,88,1020,7.4,broken clouds,2024-12-29 01:12:30
+Hue,VN,17.06,94,1020,16.7,mist,2024-12-29 01:12:32
+Can Tho,VN,23.99,100,1013,1.8,scattered clouds,2024-12-29 01:12:33
+Nha Trang,VN,25.0,90,1016,23.7,overcast clouds,2024-12-29 01:12:34
+Da Lat,VN,14.7,97,1016,10.3,overcast clouds,2024-12-29 01:12:35
+Vung Tau,VN,24.92,84,1012,12.8,overcast clouds,2024-12-29 01:12:37
+Quy Nhon,VN,22.7,86,1017,34.7,overcast clouds,2024-12-29 01:12:38
+Phan Rang-Thap Cham,VN,22.96,85,1014,19.7,broken clouds,2024-12-29 01:12:39
+Ca Mau,VN,24.17,87,1012,9.2,overcast clouds,2024-12-29 01:12:40
+Tuy Hoa,VN,22.38,91,1017,28.9,overcast clouds,2024-12-29 01:12:42
+New York,US,6.21,93,1024,4.8,mist,2024-12-29 01:12:43
+London,GB,4.95,95,1028,11.1,overcast clouds,2024-12-29 01:12:44
+Beijing,CN,-9.06,25,1025,2.5,clear sky,2024-12-29 01:12:45
+Tokyo,JP,3.98,59,1015,11.1,few clouds,2024-12-29 01:12:46
+Seoul,KR,-4.34,51,1025,2.1,clear sky,2024-12-29 01:12:47
+Oxford,GB,4.79,95,1029,5.5,overcast clouds,2024-12-29 01:12:49
+Cambridge,CA,9.83,96,1015,18.5,overcast clouds,2024-12-29 01:12:50
+Las Vegas,US,12.94,45,1021,7.4,clear sky,2024-12-29 01:12:52
+Hawaii,US,24.01,65,1019,16.7,clear sky,2024-12-29 01:12:54
+Phan Thiet,VN,23.08,84,1013,10.9,broken clouds,2024-12-29 01:12:56
+Paris,FR,0.72,100,1030,7.4,overcast clouds,2024-12-29 01:12:57
+Berlin,DE,0.85,80,1029,6.3,clear sky,2024-12-29 01:12:58
+Madrid,ES,7.27,72,1029,1.8,clear sky,2024-12-29 01:12:59
+Rome,US,12.15,94,1020,11.1,overcast clouds,2024-12-29 01:13:00
+Vienna,AT,2.84,70,1030,7.4,clear sky,2024-12-29 01:13:02
+Amsterdam,NL,1.39,89,1028,11.1,mist,2024-12-29 01:13:03
+Brussels,BE,0.4,96,1029,5.5,clear sky,2024-12-29 01:13:04
+Lisbon,PT,13.2,65,1027,11.1,clear sky,2024-12-29 01:13:05
+Stockholm,SE,5.09,98,1019,13.0,mist,2024-12-29 01:13:06
+Oslo,NO,3.42,88,1015,7.2,moderate rain,2024-12-29 01:13:07
+Copenhagen,DK,2.61,95,1025,14.8,broken clouds,2024-12-29 01:13:09
+Helsinki,FI,4.21,99,1019,32.2,mist,2024-12-29 01:13:10
+Dublin,US,14.1,91,1022,11.3,overcast clouds,2024-12-29 01:13:11
+Warsaw,PL,0.88,94,1029,91.7,light intensity drizzle,2024-12-29 01:13:12
+Prague,CZ,0.49,51,1030,4.1,clear sky,2024-12-29 01:13:13
+Budapest,HU,2.55,79,1030,2.0,clear sky,2024-12-29 01:13:15
+Athens,GR,9.14,60,1023,20.9,scattered clouds,2024-12-29 01:13:16
+Zurich,CH,-0.9,94,1032,5.5,fog,2024-12-29 01:13:17
+Istanbul,TR,6.08,87,1023,29.6,broken clouds,2024-12-29 01:13:18
+Moscow,RU,-0.34,98,1027,4.0,overcast clouds,2024-12-29 01:13:19
+Saint Petersburg,RU,1.14,92,1021,7.2,overcast clouds,2024-12-29 01:13:21
+Kiev,UA,0.4,96,1030,5.6,scattered clouds,2024-12-29 01:13:22
+Minsk,BY,-0.14,97,1028,8.6,overcast clouds,2024-12-29 01:13:23
+Bucharest,RO,2.13,93,1030,7.4,overcast clouds,2024-12-29 01:13:24
+Sofia,BG,0.1,86,1031,7.4,scattered clouds,2024-12-29 01:13:25
+Belgrade,RS,-0.21,85,1031,5.6,clear sky,2024-12-29 01:13:27
+Zagreb,HR,-0.18,74,1031,3.7,clear sky,2024-12-29 01:13:28
+Sarajevo,BA,-2.27,100,1033,5.5,mist,2024-12-29 01:13:30
+Ljubljana,SI,-1.69,88,1032,3.7,clear sky,2024-12-29 01:13:31
+Bratislava,SK,0.41,87,1030,5.5,clear sky,2024-12-29 01:13:32
+Tallinn,EE,4.53,93,1020,14.8,light intensity drizzle,2024-12-29 01:13:33
+Riga,LV,3.97,95,1024,3.7,overcast clouds,2024-12-29 01:13:35
+Vilnius,LT,2.4,100,1027,9.3,light intensity drizzle,2024-12-29 01:13:36
+Skopje,MK,3.82,65,1029,14.8,clear sky,2024-12-29 01:13:37
+Podgorica,ME,9.87,46,1026,16.7,clear sky,2024-12-29 01:13:38
+Tirana,AL,4.49,60,1025,5.5,clear sky,2024-12-29 01:13:40
+Valletta,MT,13.3,67,1025,3.7,few clouds,2024-12-29 01:13:41
+Reykjavik,IS,-2.28,62,1001,21.8,broken clouds,2024-12-29 01:13:42
+Luxembourg,BE,-1.94,66,1030,6.1,scattered clouds,2024-12-29 01:13:43
+Monaco,MC,12.1,46,1026,18.5,clear sky,2024-12-29 01:13:45
+San Marino,SM,6.37,63,1027,11.1,clear sky,2024-12-29 01:13:46
+Andorra la Vella,AD,-1.65,69,1032,8.9,clear sky,2024-12-29 01:13:48
+Vaduz,LI,4.71,60,1033,10.7,clear sky,2024-12-29 01:13:49
+Manama,BH,20.55,73,1020,17.8,broken clouds,2024-12-29 01:13:50
+Doha,QA,19.99,94,1020,3.7,broken clouds,2024-12-29 01:13:52
+Abu Dhabi,AE,21.01,78,1021,5.5,clear sky,2024-12-29 01:13:53
+Muscat,OM,20.01,49,1021,11.6,few clouds,2024-12-29 01:13:54
+Kuwait City,KW,17.14,60,1021,4.8,overcast clouds,2024-12-29 01:13:56
+Riyadh,SA,20.08,31,1019,15.7,few clouds,2024-12-29 01:13:57
+Baghdad,IQ,10.95,50,1021,7.4,clear sky,2024-12-29 01:13:58
+Jakarta,ID,27.26,78,1010,13.3,overcast clouds,2024-12-29 01:13:59
+Singapore,SG,26.7,84,1011,11.1,broken clouds,2024-12-29 01:14:00
+Bangkok,TH,26.05,49,1014,8.7,few clouds,2024-12-29 01:14:02
+Kuala Lumpur,MY,25.53,93,1012,5.3,light rain,2024-12-29 01:14:03
+Manila,PH,24.43,85,1012,9.6,overcast clouds,2024-12-29 01:14:04
+Sydney,AU,16.76,86,1012,11.2,clear sky,2024-12-29 01:14:05
+Melbourne,US,24.45,73,1020,24.1,overcast clouds,2024-12-29 01:14:06
+Perth,AU,20.13,53,1012,9.6,clear sky,2024-12-29 01:14:08
+Brisbane,AU,23.04,94,1010,9.3,broken clouds,2024-12-29 01:14:09
+Cape Town,ZA,22.86,66,1011,14.5,clear sky,2024-12-29 01:14:10
+Johannesburg,ZA,20.87,76,1012,1.6,light rain,2024-12-29 01:14:11
+Nairobi,KE,16.94,69,1018,15.7,broken clouds,2024-12-29 01:14:12
+Lagos,NG,29.18,76,1010,9.9,scattered clouds,2024-12-29 01:14:13
+Casablanca,MA,18.12,69,1023,5.4,overcast clouds,2024-12-29 01:14:15
+Cairo,EG,16.42,51,1021,22.2,clear sky,2024-12-29 01:14:16
+Algiers,DZ,14.35,51,1028,9.3,few clouds,2024-12-29 01:14:17
+Tunis,TN,14.89,48,1027,9.5,overcast clouds,2024-12-29 01:14:19
+Accra,GH,28.54,72,1010,16.4,few clouds,2024-12-29 01:14:20
+Mexico City,MX,19.82,21,1015,0.0,few clouds,2024-12-29 01:14:21
+Toronto,CA,6.37,93,1016,4.2,light rain,2024-12-29 01:14:22
+Montreal,CA,-5.69,82,1021,14.8,light shower snow,2024-12-29 01:14:24
+Vancouver,CA,7.81,91,1002,24.2,moderate rain,2024-12-29 01:14:25
+Buenos Aires,AR,25.72,60,1017,17.7,few clouds,2024-12-29 01:14:26
+Santiago,CL,29.62,34,1014,20.4,clear sky,2024-12-29 01:14:28
+Lima,PE,22.14,68,1013,18.5,clear sky,2024-12-29 01:14:29
+Bogotá,CO,18.73,55,1014,9.3,scattered clouds,2024-12-29 01:14:30
+Caracas,VE,23.67,61,1012,18.5,overcast clouds,2024-12-29 01:14:32
+Brasilia,BR,27.51,54,1012,13.0,overcast clouds,2024-12-29 01:14:33
+Rio de Janeiro,BR,27.11,77,1011,31.5,broken clouds,2024-12-29 01:14:34
+Sao Paulo,BR,24.15,85,1012,22.2,scattered clouds,2024-12-29 01:14:36

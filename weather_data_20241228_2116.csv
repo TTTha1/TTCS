@@ -1,0 +1,23 @@
+city,country,temperature,humidity,pressure,wind_speed,description,timestamp
+Hanoi,VN,17.0,42,1024,1.73,clear sky,2024-12-28 21:16:20
+Ho Chi Minh City,VN,26.15,83,1014,1.54,scattered clouds,2024-12-28 21:16:21
+Da Nang,VN,18.99,100,1022,3.09,mist,2024-12-28 21:16:23
+Hue,VN,18.06,94,1023,3.09,light rain,2024-12-28 21:16:24
+Can Tho,VN,24.99,94,1014,4.12,scattered clouds,2024-12-28 21:16:25
+Nha Trang,VN,24.0,90,1018,7.12,overcast clouds,2024-12-28 21:16:27
+Da Lat,VN,15.14,98,1018,2.56,overcast clouds,2024-12-28 21:16:28
+Vung Tau,VN,25.59,85,1013,6.82,broken clouds,2024-12-28 21:16:30
+Quy Nhon,VN,22.93,89,1019,10.66,overcast clouds,2024-12-28 21:16:31
+Phan Rang-Thap Cham,VN,23.65,85,1016,5.33,overcast clouds,2024-12-28 21:16:32
+Ca Mau,VN,25.06,83,1014,5.12,overcast clouds,2024-12-28 21:16:34
+Tuy Hoa,VN,22.67,92,1019,8.34,overcast clouds,2024-12-28 21:16:35
+New York,US,4.04,92,1026,2.57,light rain,2024-12-28 21:16:36
+London,GB,4.49,95,1028,2.24,overcast clouds,2024-12-28 21:16:37
+Beijing,CN,-4.06,22,1026,0.88,clear sky,2024-12-28 21:16:39
+Tokyo,JP,4.04,57,1015,3.38,clear sky,2024-12-28 21:16:40
+Seoul,KR,-5.34,50,1025,2.36,clear sky,2024-12-28 21:16:41
+Oxford,GB,5.53,96,1028,2.06,broken clouds,2024-12-28 21:16:43
+Cambridge,CA,4.59,98,1016,3.09,mist,2024-12-28 21:16:44
+Las Vegas,US,6.98,61,1019,2.57,clear sky,2024-12-28 21:16:46
+Hawaii,US,23.12,71,1018,3.6,clear sky,2024-12-28 21:16:47
+Phan Thiet,VN,24.55,78,1014,5.51,broken clouds,2024-12-28 21:16:48
